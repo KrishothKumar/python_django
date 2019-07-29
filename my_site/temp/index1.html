@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h5>hello {{name}}</h5>
+<form  action="add" method="post">
+  {% csrf_token %}
+  Enter the 1st number :<input type="text" name="num1" value=""><br>
+  Enter the 2st number :<input type="text" name="num2" value=""><br>
+  <input type="submit">
+</form>
+
+<a href="/studius/REST APIs with Flask and Python/6. Simplifying storage with Flask-SQLAlchemy/">link text</a>
+
+<video width="1280" height="720" controls>
+  <source src="{% static '9. Implementing the ItemModel using SQLAlchemy.mp4' %}" type="video/mp4">
+  Your browser does not support the 9 video tag.
+</video>
+<video width="1280" height="720" controls>
+  <source src="{% static '10. Implementing the UserModel using SQLAlchemy.mp4' %}" type="video/mp4">
+  Your browser does not support the 10 video tag.
+</video>
+<video width="1280" height="720" controls>
+  <source src="{% static '11. Easily displaying the ItemList resource with SQLAlchemy.mp4' %}" type="video/mp4">
+  Your browser does not support the 11 video tag.
+</video>
+<video width="1280" height="720" controls>
+  <source src="{% static '12. No more creating tables manually—telling SQLAlchemy to create tables.mp4' %}" type="video/mp4">
+  Your browser does not support the 12 video tag.
+</video>
+<video width="1280" height="720" controls>
+  <source src="{% static '13. Creating a new model StoreModel.mp4' %}" type="video/mp4">
+  Your browser does not support the 13 video tag.
+<!-- </video>
+<video width="1280" height="720" controls> -->
+  <source src="{% static '14. Creating the Store Resource.mp4' %}" type="video/mp4">
+  Your browser does not support the 14 video tag.
+</video>
+
+
+{% endblock %}
