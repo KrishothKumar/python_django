@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- {% url 'register' as abc %} -->
+<div class="container">
+  <form action="login" method="post">
+    {% csrf_token %}
+
+    <label>E-mail:</label><input type="text" name="email" placeholder="some@xyz.com"/><br>
+    <label>Password:</label><input type="password" name="password" placeholder="Password"/><br>
+    <input type="submit" value="sign up"/><br>
+  </form>
+  {% for message in messages %}
+  <h4>{{message}}</h4>
+  {% endfor %}
+</div>
+
+{%endblock%}
