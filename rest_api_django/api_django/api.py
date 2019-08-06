@@ -13,12 +13,9 @@ class UserViewsets(viewsets.ModelViewSet):
                        ]
     serializer_class= UserSerializers
 
-    def get_queryset(self):
-        if self.request.method == "POST":
-            return redirect("/admin/")
-        elif self.request.method == "GET":
-            content = {}
-            return HttpResponse(json.dumps(content), content_type='application/json')
-
-
-# 'user_count': '2'
+    # def get_queryset(self):
+    #     if self.request.method == "POST":
+    #         return redirect("/admin/")
+    #     elif self.request.method == "GET":
+    #         content = {}
+    #         return HttpResponse(json.dumps(content), content_type='application/json') # This is to get the Json value still in bug
